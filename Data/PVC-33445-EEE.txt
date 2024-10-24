@@ -1,0 +1,23 @@
+physical_properties: {'length': '6 meters', 'diameter': '50 mm', 'weight': '2 kg per pipe'}
+chemical_properties: {}
+seller: {'store_name': 'PipeMasters LLC', 'contact_info': '', 'phone': '', 'address': '', 'user': 7}
+product_type: Construction Material
+product_id: PVC-33445-EEE
+product_name: PVC Water Supply Pipe
+product_identification: NSF Certified, Class 315
+purity_composition: 100% Virgin PVC
+quantity: 3000
+unit: pipes
+price: 12.00
+currency: USD
+rating: 4.30
+category: Construction Materials
+sub_category: PVC Pipes
+minimum_order_quantity: 20
+availability_status: In Stock
+location: Miami, USA
+delivery_time: 5-7 business days
+images: ['https://kennedys.net.au/wp-content/uploads/2018/10/PVC-Ag-Pipe-Kennedys-Garden-Supplies-155.jpg']
+manufacture_date: 2024-05-01
+shipping_cost: 20.00
+discount: 7

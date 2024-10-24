@@ -1,0 +1,22 @@
+physical_properties: {'weight': '95 kg'}
+chemical_properties: {}
+seller: {'store_name': 'MixMaster Equipment', 'contact_info': '', 'phone': '', 'address': '', 'user': 13}
+product_type: Construction Material
+product_id: CMX-66789-KKK
+product_name: Portable Concrete Mixer 220V
+product_identification: Model PCMX-180
+quantity: 50
+unit: pieces
+price: 1200.00
+currency: USD
+rating: 4.70
+category: Construction Materials
+sub_category: Concrete Mixers
+minimum_order_quantity: 1
+availability_status: In Stock
+location: Atlanta, USA
+delivery_time: 5-7 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.AnT2jgutTRsoYTtoMg7J8wHaHa%26pid%3DApi&f=1&ipt=234910a68e6cd3dfaa0b80fab40c22de86c37dc0a63bfdc73e6e2a9a46aaf352&ipo=images']
+manufacture_date: 2024-06-01
+shipping_cost: 75.00
+discount: 13

@@ -1,0 +1,23 @@
+physical_properties: {'weight': '150 kg per drum'}
+chemical_properties: {}
+seller: {'store_name': 'RoadTech Supplies', 'contact_info': '', 'phone': '', 'address': '', 'user': 11}
+product_type: Construction Material
+product_id: ASP-44567-III
+product_name: Bitumen Asphalt - Grade 60/70
+product_identification: ISO 9001:2015 Certified
+purity_composition: 100% Refined Asphalt
+quantity: 800
+unit: drums
+price: 90.00
+currency: USD
+rating: 4.60
+category: Construction Materials
+sub_category: Asphalt
+minimum_order_quantity: 10
+availability_status: In Stock
+location: Dallas, USA
+delivery_time: 7-10 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YVALYkitci6NFxTQrdm0rQHaHa%26pid%3DApi&f=1&ipt=f542b2da8a1c395260477f094efab31609c25c21a7927cc3841d5999a9781dae&ipo=images']
+manufacture_date: 2024-05-10
+shipping_cost: 50.00
+discount: 11

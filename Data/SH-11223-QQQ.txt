@@ -1,0 +1,22 @@
+physical_properties: {'weight': '400 grams'}
+chemical_properties: {}
+seller: {'store_name': 'SafeGuard Equipment', 'contact_info': '', 'phone': '', 'address': '', 'user': 19}
+product_type: Safety Gear
+product_id: SH-11223-QQQ
+product_name: High-Visibility Safety Helmet
+product_identification: Model HV-3000, EN 397 Certified
+quantity: 500
+unit: pieces
+price: 25.00
+currency: USD
+rating: 4.50
+category: Safety Gear
+sub_category: Safety Helmets
+minimum_order_quantity: 10
+availability_status: In Stock
+location: Miami, USA
+delivery_time: 5-7 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.KSpvqMRuT7jPdnlYx1u3mQHaF5%26pid%3DApi&f=1&ipt=334e3c98f5873dcaaa8eccabc4361276a92925216ec9262686b420882e6c891d&ipo=images']
+manufacture_date: 2024-06-01
+shipping_cost: 10.00
+discount: 19

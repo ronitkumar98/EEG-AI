@@ -1,0 +1,22 @@
+physical_properties: {'weight': '1000 kg'}
+chemical_properties: {}
+seller: {'store_name': 'LiftTech Systems', 'contact_info': '', 'phone': '', 'address': '', 'user': 20}
+product_type: Transportation & Logistics
+product_id: HL-33445-RRR
+product_name: Hydraulic Scissor Lift - 3 Tons
+product_identification: Model HSL-3000, CE Certified
+quantity: 20
+unit: pieces
+price: 5000.00
+currency: USD
+rating: 4.80
+category: Transportation & Logistics
+sub_category: Hydraulic Lifts
+minimum_order_quantity: 1
+availability_status: In Stock
+location: Boston, USA
+delivery_time: 7-14 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.zyHLydXBOkf3AuMl-Bbo8QHaHa%26pid%3DApi&f=1&ipt=dd915bb54a383e9ad258e253c0ac9e58beaf4decd85c6dc77f6637fffdaaa2f1&ipo=images']
+manufacture_date: 2024-05-15
+shipping_cost: 300.00
+discount: 20

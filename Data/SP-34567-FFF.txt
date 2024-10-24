@@ -1,0 +1,22 @@
+physical_properties: {'weight': '18 kg'}
+chemical_properties: {}
+seller: {'store_name': 'Green Energy Co.', 'contact_info': '', 'phone': '', 'address': '', 'user': 28}
+product_type: Energy Resource
+product_id: SP-34567-FFF
+product_name: Polycrystalline Solar Panel - 300W
+product_identification: Efficiency: 18.5%
+quantity: 200
+unit: pieces
+price: 200.00
+currency: USD
+rating: 4.90
+category: Energy Resources
+sub_category: Solar Panels
+minimum_order_quantity: 5
+availability_status: In Stock
+location: San Diego, USA
+delivery_time: 7-10 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.0ejfQHEfIUnEkCf0XOIwSgHaHa%26pid%3DApi&f=1&ipt=6d43c163b535c6ebed3f34e98a2091e4dd0e1fa1271e8db9d7d8fb7bacc02e4a&ipo=images']
+manufacture_date: 2024-05-15
+shipping_cost: 50.00
+discount: 28

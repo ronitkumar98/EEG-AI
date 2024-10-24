@@ -1,0 +1,22 @@
+physical_properties: {'weight': '1 kg'}
+chemical_properties: {}
+seller: {'store_name': 'EcoPlastics Ltd.', 'contact_info': '', 'phone': '', 'address': '', 'user': 39}
+product_type: Plastic & Composites
+product_id: PP-24680-RRR
+product_name: Recycled Plastic Pellets - 1kg
+product_identification: BPA-Free, Eco-Friendly
+quantity: 1000
+unit: bags
+price: 10.00
+currency: USD
+rating: 4.60
+category: Plastic & Composites
+sub_category: Plastic Pellets
+minimum_order_quantity: 50
+availability_status: In Stock
+location: Boston, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._wq-QkaUN8KgCtfPrPYjJAHaFj%26pid%3DApi&f=1&ipt=4c63897b697767430082bff6c70ba200c56b90484e75a3c606bf2297e78ec310&ipo=images']
+manufacture_date: 2024-06-10
+shipping_cost: 15.00
+discount: 39

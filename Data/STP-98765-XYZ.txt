@@ -1,0 +1,23 @@
+physical_properties: {'length': '6 meters', 'diameter': '2 inches', 'weight': '15 kg'}
+chemical_properties: {'zinc_coating': '275 g/mÂ²', 'carbon_content': '0.15%'}
+seller: {'store_name': 'IronHub Corp.', 'contact_info': 'contact@ironhub.com', 'phone': '+1-555-111-2222', 'address': '456 Iron Street, Chicago, USA', 'user': 1}
+product_type: Construction Material
+product_id: STP-98765-XYZ
+product_name: Galvanized Steel Pipe
+product_identification: ISO-9001 Certified
+purity_composition: 98% Steel, 2% Zinc
+quantity: 1500
+unit: pieces
+price: 110.00
+currency: USD
+rating: 4.60
+category: Construction Materials
+sub_category: Steel Pipes
+minimum_order_quantity: 20
+availability_status: In Stock
+location: Chicago, USA
+delivery_time: 7-10 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.zssteeltube.com%2Fwp-content%2Fuploads%2F2018%2F07%2Fgi-steel-pipe-4-2.jpg&f=1&nofb=1&ipt=08b5142ebdb307d37d0c70672bfd2d69e110e15ac6c8afd256803f565d11cf39&ipo=images']
+manufacture_date: 2023-05-20
+shipping_cost: 70.00
+discount: 1

@@ -1,0 +1,22 @@
+physical_properties: {'weight': '1 kg'}
+chemical_properties: {}
+seller: {'store_name': 'Plastics Plus Co.', 'contact_info': '', 'phone': '', 'address': '', 'user': 34}
+product_type: Plastic & Composite
+product_id: PB-32123-MMM
+product_name: PET Plastic Bottles - 500ml
+product_identification: Recyclable, BPA-Free
+quantity: 1000
+unit: pieces
+price: 0.50
+currency: USD
+rating: 4.60
+category: Plastic & Composites
+sub_category: Plastic Bottles
+minimum_order_quantity: 100
+availability_status: In Stock
+location: Chicago, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.45BWwtiYBKd8XAq7FPDQoQHaHa%26pid%3DApi&f=1&ipt=b3475c6a2a88c47474fa398a1738cca9868e58cc5f9b6309cdd321248a439385&ipo=images']
+manufacture_date: 2024-07-01
+shipping_cost: 10.00
+discount: 34

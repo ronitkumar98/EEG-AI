@@ -1,0 +1,24 @@
+physical_properties: {'weight': '1.2 kg'}
+chemical_properties: {}
+seller: {'store_name': 'Adhesive Solutions Ltd.', 'contact_info': '', 'phone': '', 'address': '', 'user': 10}
+product_type: Industrial Supply
+product_id: ADH-22456-HHH
+product_name: High-Strength Epoxy Adhesive
+product_identification: ISO 9001 Certified
+purity_composition: 98% Epoxy Resin
+quantity: 1000
+unit: cans
+price: 35.00
+currency: USD
+rating: 4.80
+category: Industrial Supplies
+sub_category: Adhesives
+minimum_order_quantity: 5
+availability_status: In Stock
+location: Houston, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.LR0aSLaXxh6KuUy6DI3l5AHaHa%26pid%3DApi&f=1&ipt=08c95af82ffd63d42c45e32bdc4124b4fb3ce72165a227d64163d8b8cf907e4c&ipo=images']
+manufacture_date: 2024-03-01
+expiry_date: 2025-03-01
+shipping_cost: 15.00
+discount: 10

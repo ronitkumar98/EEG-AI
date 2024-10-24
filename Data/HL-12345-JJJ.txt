@@ -1,0 +1,22 @@
+physical_properties: {'weight': '250 kg'}
+chemical_properties: {}
+seller: {'store_name': 'Lift Tech Solutions', 'contact_info': '', 'phone': '', 'address': '', 'user': 31}
+product_type: Transportation & Logistics
+product_id: HL-12345-JJJ
+product_name: Hydraulic Lift Table - 1000 kg
+product_identification: Electric Powered, Adjustable Height
+quantity: 20
+unit: pieces
+price: 2500.00
+currency: USD
+rating: 4.80
+category: Transportation & Logistics
+sub_category: Hydraulic Lifts
+minimum_order_quantity: 1
+availability_status: In Stock
+location: Seattle, USA
+delivery_time: 7-10 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.qdFJ1lN2MDwouE-AoTpeCgHaHa%26pid%3DApi&f=1&ipt=c9c9c577cbffde15d8b00e3704b2575c10a3867fccc5a4e135a1c7212ce97045&ipo=images']
+manufacture_date: 2024-05-10
+shipping_cost: 200.00
+discount: 31

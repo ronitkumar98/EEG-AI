@@ -1,0 +1,23 @@
+physical_properties: {'weight': '10 kg'}
+chemical_properties: {}
+seller: {'store_name': 'PaintPro Industries', 'contact_info': '', 'phone': '', 'address': '', 'user': 24}
+product_type: Industrial Supply
+product_id: IP-12345-BBB
+product_name: High-Temperature Industrial Paint - Red
+product_identification: Heat Resistant up to 500Â°F
+quantity: 200
+unit: cans
+price: 150.00
+currency: USD
+rating: 4.70
+category: Industrial Supplies
+sub_category: Industrial Paint
+minimum_order_quantity: 5
+availability_status: In Stock
+location: New York, USA
+delivery_time: 5-10 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.6_wkVwBu2Up-lFnaDDyPLgHaHa%26pid%3DApi&f=1&ipt=6e93e51e6ec69918a2a368dbd2b335d4a29f81ce028e8d86a8ddd37024c28838&ipo=images']
+manufacture_date: 2024-05-20
+expiry_date: 2025-05-20
+shipping_cost: 20.00
+discount: 24

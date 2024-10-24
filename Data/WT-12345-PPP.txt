@@ -1,0 +1,22 @@
+physical_properties: {'weight': '150 tons'}
+chemical_properties: {}
+seller: {'store_name': 'Green Energy Solutions', 'contact_info': '', 'phone': '', 'address': '', 'user': 18}
+product_type: Energy Resource
+product_id: WT-12345-PPP
+product_name: 2MW Horizontal Axis Wind Turbine
+product_identification: Model HT-2000, IEC Class II
+quantity: 30
+unit: pieces
+price: 350000.00
+currency: USD
+rating: 4.90
+category: Energy Resources
+sub_category: Wind Turbines
+minimum_order_quantity: 1
+availability_status: In Stock
+location: San Diego, USA
+delivery_time: 30-60 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.pDo4OZuL0GllrVZdWJ3OnQAAAA%26pid%3DApi&f=1&ipt=4b8fa0d65efba40b3fcce320b860a25969e39bea459c17d14bff925b16f7c8c1&ipo=images']
+manufacture_date: 2024-05-10
+shipping_cost: 10000.00
+discount: 18

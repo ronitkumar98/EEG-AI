@@ -1,0 +1,23 @@
+physical_properties: {'length': '100 meters', 'weight': '20 kg'}
+chemical_properties: {}
+seller: {'store_name': 'WireTech Supplies', 'contact_info': '', 'phone': '', 'address': '', 'user': 15}
+product_type: Electrical Component
+product_id: CW-88901-MMM
+product_name: Copper Electrical Wire - 10 AWG
+product_identification: UL Listed, Soft Annealed
+purity_composition: 100% Pure Copper
+quantity: 1000
+unit: rolls
+price: 150.00
+currency: USD
+rating: 4.60
+category: Electrical Components
+sub_category: Copper Wires
+minimum_order_quantity: 5
+availability_status: In Stock
+location: Seattle, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.qT13wQzf-Fh7yZj1Yr6HSAHaG6%26pid%3DApi&f=1&ipt=ddf143d410c3d56242f47b00298385c88a1d79c7adf49361f8c0b71f65e2f445&ipo=images']
+manufacture_date: 2024-06-15
+shipping_cost: 15.00
+discount: 15

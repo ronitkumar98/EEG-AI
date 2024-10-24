@@ -1,0 +1,22 @@
+chemical_properties: {}
+seller: {'store_name': 'ChemWorld Ltd.', 'contact_info': '', 'phone': '', 'address': '', 'user': 4}
+product_type: Industrial Supply
+product_id: CHM-56789-BBB
+product_name: Sodium Hydroxide (Caustic Soda)
+product_identification: 99% Pure NaOH
+purity_composition: 99% NaOH, 1% Moisture
+quantity: 1200
+unit: kg
+price: 20.00
+currency: USD
+rating: 4.70
+category: Industrial Supplies
+sub_category: Chemicals
+minimum_order_quantity: 10
+availability_status: In Stock
+location: Detroit, USA
+delivery_time: 2-4 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2Ff7151025-f254-4c23-ac71-3b5ee8a4486f_1.06599ced82e3e88315e88b4048430fac.jpeg&f=1&nofb=1&ipt=be0e8019ee80faaaa7dac31cdeeb924453906bf2e2711a5e0a1afdcb7679d521&ipo=images']
+manufacture_date: 2024-02-01
+expiry_date: 2025-02-01
+shipping_cost: 25.00

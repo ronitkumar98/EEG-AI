@@ -1,0 +1,22 @@
+physical_properties: {'weight': '75 kg'}
+chemical_properties: {}
+seller: {'store_name': 'Electric Motors Co.', 'contact_info': '', 'phone': '', 'address': '', 'user': 17}
+product_type: Electrical Component
+product_id: MTR-44567-OOO
+product_name: AC Induction Motor - 5HP
+product_identification: TEFC, 3 Phase
+quantity: 100
+unit: pieces
+price: 600.00
+currency: USD
+rating: 4.70
+category: Electrical Components
+sub_category: Motors
+minimum_order_quantity: 1
+availability_status: In Stock
+location: Los Angeles, USA
+delivery_time: 5-7 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.tUYeqhn0AiW3x2hBxFuU5AHaHa%26pid%3DApi&f=1&ipt=39f4af6f7befb20113c594bb413134b6667cfab5c8320e506cd9da339cedab8e&ipo=images']
+manufacture_date: 2024-04-20
+shipping_cost: 45.00
+discount: 17

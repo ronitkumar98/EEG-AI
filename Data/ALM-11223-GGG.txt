@@ -1,0 +1,23 @@
+physical_properties: {'length': '2 meters', 'weight': '5 kg'}
+chemical_properties: {}
+seller: {'store_name': 'MetalHub Industries', 'contact_info': '', 'phone': '', 'address': '', 'user': 9}
+product_type: Construction Material
+product_id: ALM-11223-GGG
+product_name: Aluminum Sheet - Grade 6061
+product_identification: ASTM B209 Compliant
+purity_composition: 99% Pure Aluminum
+quantity: 1500
+unit: sheets
+price: 80.00
+currency: USD
+rating: 4.50
+category: Construction Materials
+sub_category: Aluminum Sheets
+minimum_order_quantity: 10
+availability_status: In Stock
+location: San Francisco, USA
+delivery_time: 5-7 business days
+images: ['http://www.aerospacealuminium.com/photo/pl24708546-alloy_type_aluminium_6061_sheets_building_structure_use_6061_t6_aluminum_plate.jpg']
+manufacture_date: 2024-04-01
+shipping_cost: 50.00
+discount: 9

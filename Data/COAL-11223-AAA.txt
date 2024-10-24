@@ -1,0 +1,22 @@
+physical_properties: {'weight': '1000 kg'}
+chemical_properties: {'carbon_content': '86%'}
+seller: {'store_name': 'Coal Mining Co.', 'contact_info': '', 'phone': '', 'address': '', 'user': 40}
+product_type: Energy Resources
+product_id: COAL-11223-AAA
+product_name: High-Quality Anthracite Coal - Bulk
+product_identification: Low Ash, High Carbon Content
+quantity: 200
+unit: tons
+price: 120.00
+currency: USD
+rating: 4.50
+category: Energy Resources
+sub_category: Coal
+minimum_order_quantity: 5
+availability_status: In Stock
+location: Pittsburgh, USA
+delivery_time: 7-10 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.gIc6MD-BKw4MAbs8xznWEwHaE8%26pid%3DApi&f=1&ipt=fb4eac2cae835b7a228848f7ffabb94958502a3c230c6f488953ce708649eaf2&ipo=images']
+manufacture_date: 2024-06-15
+shipping_cost: 100.00
+discount: 40

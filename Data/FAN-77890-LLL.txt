@@ -1,0 +1,22 @@
+physical_properties: {'weight': '25 kg'}
+chemical_properties: {}
+seller: {'store_name': 'AirFlow Solutions', 'contact_info': '', 'phone': '', 'address': '', 'user': 14}
+product_type: Industrial Supply
+product_id: FAN-77890-LLL
+product_name: High-Performance Industrial Fan
+product_identification: Model IF-3000, 3-Speed Settings
+quantity: 150
+unit: pieces
+price: 250.00
+currency: USD
+rating: 4.90
+category: Industrial Supplies
+sub_category: Industrial Fans
+minimum_order_quantity: 1
+availability_status: In Stock
+location: New York, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP._u6gjnc5piqg2a_aI1IYdAAAAA%26pid%3DApi&f=1&ipt=9369c74a238dd50f85e08e32f87e6e37d22d19a4160875459a0c86f2505cd564&ipo=images']
+manufacture_date: 2024-05-01
+shipping_cost: 40.00
+discount: 14

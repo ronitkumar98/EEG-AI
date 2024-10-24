@@ -1,0 +1,23 @@
+physical_properties: {'length': '12 meters', 'diameter': '16 mm', 'weight': '15 kg per rod'}
+chemical_properties: {'carbon_content': '0.25%'}
+seller: {'store_name': 'SteelMakers Inc.', 'contact_info': '', 'phone': '', 'address': '', 'user': 5}
+product_type: Construction Material
+product_id: TMT-22334-CCC
+product_name: TMT Iron Rod
+product_identification: Grade Fe 500D
+purity_composition: 99% Iron, 1% Alloy
+quantity: 2000
+unit: rods
+price: 50.00
+currency: USD
+rating: 4.20
+category: Construction Materials
+sub_category: Iron Rods
+minimum_order_quantity: 50
+availability_status: In Stock
+location: Pittsburgh, USA
+delivery_time: 5-7 business days
+images: ['https://waritigiafrica.com/wp-content/uploads/2019/12/rebar-768x512.jpg']
+manufacture_date: 2023-11-05
+shipping_cost: 100.00
+discount: 5

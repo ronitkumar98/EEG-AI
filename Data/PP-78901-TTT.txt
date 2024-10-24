@@ -1,0 +1,22 @@
+physical_properties: {'weight': '25 kg'}
+chemical_properties: {}
+seller: {'store_name': 'Polymer Industries', 'contact_info': '', 'phone': '', 'address': '', 'user': 22}
+product_type: Plastic & Composite
+product_id: PP-78901-TTT
+product_name: Polypropylene Plastic Pellets
+product_identification: Melt Flow Index: 8 g/10 min
+quantity: 1500
+unit: bags
+price: 45.00
+currency: USD
+rating: 4.80
+category: Plastic & Composites
+sub_category: Plastic Pellets
+minimum_order_quantity: 10
+availability_status: In Stock
+location: Dallas, USA
+delivery_time: 5-7 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.OHhl20cm-QETk5raFdsffAHaE8%26pid%3DApi&f=1&ipt=ad38c1ad2184bf8f3d478022fc63e569a439e4a82605c55965b2ba64209cca67&ipo=images']
+manufacture_date: 2024-05-30
+shipping_cost: 20.00
+discount: 22

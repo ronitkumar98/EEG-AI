@@ -1,0 +1,24 @@
+physical_properties: {'weight': '50 kg'}
+chemical_properties: {}
+seller: {'store_name': 'ConcreteSolutions', 'contact_info': '', 'phone': '', 'address': '', 'user': 3}
+product_type: Construction Material
+product_id: CBG-11223-AAA
+product_name: Portland Cement 50kg
+product_identification: EN-197 Certified Cement
+purity_composition: 92% Cement, 8% Additives
+quantity: 5000
+unit: bags
+price: 8.00
+currency: USD
+rating: 4.40
+category: Construction Materials
+sub_category: Cement Bags
+minimum_order_quantity: 50
+availability_status: In Stock
+location: Atlanta, USA
+delivery_time: 4-6 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fst2.depositphotos.com%2F1029541%2F6377%2Fi%2F950%2Fdepositphotos_63779125-stock-photo-bags-of-cement.jpg&f=1&nofb=1&ipt=c43732b255b071441b9517ae328f641ce68f34b3532ae65124fdead00788154f&ipo=images']
+manufacture_date: 2023-09-01
+expiry_date: 2025-09-01
+shipping_cost: 10.00
+discount: 3

@@ -1,0 +1,24 @@
+physical_properties: {}
+chemical_properties: {}
+seller: {'store_name': 'LubeWorks Inc.', 'contact_info': '', 'phone': '', 'address': '', 'user': 2}
+product_type: Industrial Supply
+product_id: LUB-45678-QWE
+product_name: High-Performance Lubricant Oil
+product_identification: ISO-14001 Compliant
+purity_composition: 97% Oil, 3% Additives
+quantity: 800
+unit: drums
+price: 250.00
+currency: USD
+rating: 4.80
+category: Industrial Supplies
+sub_category: Industrial Lubricants
+minimum_order_quantity: 5
+availability_status: In Stock
+location: Houston, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.telko.com%2Fhubfs%2FPictures%2FIndustry-Lubricants%2Findustry-industrial-oils.jpeg%23keepProtocol&f=1&nofb=1&ipt=9e16503e3a868f61775590f81c49ad6ffd5ce5ac56f2169691d8f6b2f6b47c06&ipo=images']
+manufacture_date: 2024-01-10
+expiry_date: 2025-01-10
+shipping_cost: 30.00
+discount: 2

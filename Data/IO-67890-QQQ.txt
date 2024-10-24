@@ -1,0 +1,22 @@
+physical_properties: {'weight': '1000 kg'}
+chemical_properties: {}
+seller: {'store_name': 'OreMining Corp.', 'contact_info': '', 'phone': '', 'address': '', 'user': 38}
+product_type: Metal Products
+product_id: IO-67890-QQQ
+product_name: Iron Ore - Bulk
+product_identification: Fe Content: 62%, High Purity
+quantity: 500
+unit: ton
+price: 150.00
+currency: USD
+rating: 4.70
+category: Metal Products
+sub_category: Iron Ore
+minimum_order_quantity: 1
+availability_status: In Stock
+location: Minneapolis, USA
+delivery_time: 10-15 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.gVcguqKX4TWYD6XqoV_4bQAAAA%26pid%3DApi&f=1&ipt=a99824f32fcf80858c4c31c73b52fe556b92f742b31911382e4b293ce665b9b6&ipo=images']
+manufacture_date: 2024-07-01
+shipping_cost: 100.00
+discount: 38

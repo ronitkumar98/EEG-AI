@@ -1,0 +1,23 @@
+physical_properties: {}
+chemical_properties: {}
+seller: {'store_name': 'Global Oil Traders', 'contact_info': '', 'phone': '', 'address': '', 'user': 16}
+product_type: Energy Resource
+product_id: CRUDE-55678-NNN
+product_name: Crude Oil - Brent Blend
+product_identification: Light Sweet Crude, API 38
+purity_composition: 95% Pure Crude Oil
+quantity: 50000
+unit: barrels
+price: 85.00
+currency: USD
+rating: 4.50
+category: Energy Resources
+sub_category: Crude Oil
+minimum_order_quantity: 10
+availability_status: In Stock
+location: Houston, USA
+delivery_time: 7-14 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.c_iOC5jpNEXE6Ij34lxstAHaKL%26pid%3DApi&f=1&ipt=189ec3a35cc34884aa9d163b24b07d772a20257da3971bbd0ff24d72a77fd4a9&ipo=images']
+manufacture_date: 2024-07-01
+shipping_cost: 200.00
+discount: 16

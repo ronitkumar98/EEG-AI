@@ -1,0 +1,22 @@
+physical_properties: {'weight': '0.3 kg'}
+chemical_properties: {}
+seller: {'store_name': 'Pipe & Fittings Co.', 'contact_info': '', 'phone': '', 'address': '', 'user': 27}
+product_type: Electrical Component
+product_id: BF-87654-EEE
+product_name: Brass Elbow Fitting - 1/2 inch
+product_identification: Lead-Free, ANSI/ASME B16.22
+quantity: 1500
+unit: pieces
+price: 2.00
+currency: USD
+rating: 4.70
+category: Electrical Components
+sub_category: Brass Fittings
+minimum_order_quantity: 10
+availability_status: In Stock
+location: Portland, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Ez0Sn88uCddd1CxxoLEbMgHaHa%26pid%3DApi&f=1&ipt=4cd0199827b777f858f8b63b83729779c21021efd9ad11f96639204fed9e1bfe&ipo=images']
+manufacture_date: 2024-04-25
+shipping_cost: 15.00
+discount: 27

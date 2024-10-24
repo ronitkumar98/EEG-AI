@@ -1,0 +1,22 @@
+physical_properties: {'length': '6 m', 'weight': '25 kg'}
+chemical_properties: {'carbon_content': '0.3%'}
+seller: {'store_name': 'SteelWorks Ltd.', 'contact_info': '', 'phone': '', 'address': '', 'user': 37}
+product_type: Metal Products
+product_id: SB-54321-PPP
+product_name: Reinforced Steel Bars - 12mm
+product_identification: High Tensile Strength, Corrosion Resistant
+quantity: 200
+unit: pieces
+price: 100.00
+currency: USD
+rating: 4.80
+category: Metal Products
+sub_category: Steel Bars
+minimum_order_quantity: 5
+availability_status: In Stock
+location: Detroit, USA
+delivery_time: 7-10 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Yy_KHy7bI3axm6crOJXy4QHaHa%26pid%3DApi&f=1&ipt=95ee8b23bfcd1a7ad2eb8aa03a5a741366d48ea8a8957b5e46b4b5208db99c0d&ipo=images']
+manufacture_date: 2024-05-30
+shipping_cost: 50.00
+discount: 37

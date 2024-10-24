@@ -1,0 +1,24 @@
+physical_properties: {'weight': '25 kg'}
+chemical_properties: {}
+seller: {'store_name': 'PaintPro Co.', 'contact_info': '', 'phone': '', 'address': '', 'user': 8}
+product_type: Industrial Supply
+product_id: PAINT-88900-FFF
+product_name: Industrial Epoxy Paint
+product_identification: Corrosion-Resistant, ISO 12944 Compliant
+purity_composition: 95% Epoxy Resin, 5% Solvent
+quantity: 500
+unit: buckets
+price: 300.00
+currency: USD
+rating: 4.70
+category: Industrial Supplies
+sub_category: Industrial Paint
+minimum_order_quantity: 1
+availability_status: In Stock
+location: Detroit, USA
+delivery_time: 3-5 business days
+images: ['https://5.imimg.com/data5/SELLER/Default/2023/4/297940303/MH/GL/EE/4181819/epoxy-paints-500x500.jpg']
+manufacture_date: 2024-07-01
+expiry_date: 2025-07-01
+shipping_cost: 35.00
+discount: 8

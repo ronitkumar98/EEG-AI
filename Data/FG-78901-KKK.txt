@@ -1,0 +1,22 @@
+physical_properties: {'weight': '5 kg'}
+chemical_properties: {}
+seller: {'store_name': 'FiberTech Industries', 'contact_info': '', 'phone': '', 'address': '', 'user': 32}
+product_type: Metal Product
+product_id: FG-78901-KKK
+product_name: Fiberglass Sheets - 1/4 inch
+product_identification: Standard Size, Light Weight
+quantity: 500
+unit: sheets
+price: 50.00
+currency: USD
+rating: 4.50
+category: Metal Products
+sub_category: Fiber Glass
+minimum_order_quantity: 10
+availability_status: In Stock
+location: Miami, USA
+delivery_time: 3-5 business days
+images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.mXcaDnJMOT3nprDg70U4bwHaEy%26pid%3DApi&f=1&ipt=7221d4071365c1f9fa8df3304617b3b7c5bc29541f5a6611e71e86b642abf95c&ipo=images']
+manufacture_date: 2024-05-25
+shipping_cost: 30.00
+discount: 32
