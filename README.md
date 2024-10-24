@@ -2,7 +2,7 @@
 
 An AI Assistant capable of answering product related questions. The AI Assistant combines Open AI models with a redis vector store to provide a fast and accurate response to user queries. The AI Assistant is built using the FastAPI framework.
 
-## Installation
+## Usage
 
 1. Clone the repository
 2. Install the required packages using the following command:
