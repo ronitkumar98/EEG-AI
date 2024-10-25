@@ -67,8 +67,7 @@ jobs:
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          subscription-id: 9068d8db-33b5-4eeb-b5bd-db971d123048
           federated-credential: repo:ronitkumar98/EEG-AI:environment:Production
 
       - name: 'Deploy to Azure Web App'
