@@ -28,12 +28,11 @@ from pydantic import BaseModel
 
 warnings.filterwarnings("ignore")
 
-# Standard library imports
-
-# Third-party imports
-
 # Load environment variables
 dotenv.load_dotenv()
+
+# Initialize FastAPI app
+app = FastAPI()
 
 # Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -48,6 +47,8 @@ redis_client = redis.Redis(
     password=redis_password,
 )
 
+# Initialize OpenAI components
+embed_model = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 llm = ChatOpenAI(
     model="gpt-3.5-turbo",
     temperature=0,
@@ -57,7 +58,7 @@ llm = ChatOpenAI(
     api_key=OPENAI_API_KEY,
 )
 
-# Define templates for question processing and responses
+# Define templates
 question_template = """You are an expert in summarizing questions.
                     Your goal is to reduce a question to its simplest form while retaining the semantic meaning.
                     Try to be as deterministic as possible
@@ -65,7 +66,6 @@ question_template = """You are an expert in summarizing questions.
                     {question}
                     Output will be a semantically similar question that will be used to query an existing database."""
 
-# Define the main conversation prompt
 prompt = ChatPromptTemplate.from_messages([
     ("system", """You are an expert in answering questions about products.
                  Answer based on the retrieved product data below:
@@ -79,167 +79,27 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{question}")
 ])
 
-
-def get_data() -> List[Dict]:
-    """
-    Fetch product data from the API
-    Returns:
-        List[Dict]: List of product dictionaries
-    """
-    url = "https://eeg-backend-hfehdmd4hxfagsgu.canadacentral-01.azurewebsites.net/api/users/product"
-    response = requests.get(url)
-    return response.json()
-
-
-def prepare_data(data: List[Dict]) -> pd.DataFrame:
-    """
-    Clean and prepare the product data
-    Args:
-        data (List[Dict]): Raw product data
-    Returns:
-        pd.DataFrame: Cleaned and processed DataFrame
-    """
-    df = pd.DataFrame(data)
-    df.fillna("Unknown", inplace=True)
-    df["chemicalProperties"] = df["chemicalProperties"].apply(
-        lambda x: "Unknown" if len(x) == 0 else x
-    )
-    return df
-
-
-def create_corpus(df: pd.DataFrame) -> List[str]:
-    """
-    Create a text corpus from the DataFrame
-    Args:
-        df (pd.DataFrame): Product DataFrame
-    Returns:
-        List[str]: List of product descriptions
-    """
-    corpus = []
-    for i in range(df.shape[0]):
-        text = " ".join(f"{col}: {str(df[col][i])}" for col in df.columns)
-        corpus.append(text)
-    return corpus
-
-
-def create_prod_summary(text: str) -> str:
-    """
-    Create a product summary using ChatGPT
-    Args:
-        text (str): Product description
-    Returns:
-        str: Generated product summary
-    """
-    llm = ChatOpenAI(
-        model="gpt-3.5-turbo",
-        temperature=0,
-        max_tokens=None,
-        timeout=None,
-        max_retries=2,
-        api_key=OPENAI_API_KEY,
-    )
-    message = f"Here is a product data {text}. Your job is to create a listing of the entire product. Mention all the features and details present in the data."
-    return llm.invoke(message).content
-
-
-def retrieve_docs(question: str) -> str:
-    """
-    Retrieve relevant documents for a given question
-    Args:
-        question (str): User question
-    Returns:
-        str: Concatenated relevant documents
-    """
-    modified_question = llm.invoke(
-        question_template.format(question=question)).content
-    redis_result = redis_instance.similarity_search(
-        query=modified_question, k=5)
-    return "\n".join(res.page_content for res in redis_result)
-
-
-def get_redis_history(session_id: str) -> BaseChatMessageHistory:
-    """
-    Get Redis chat history for a session
-    Args:
-        session_id (str): Unique session identifier
-    Returns:
-        BaseChatMessageHistory: Chat history instance
-    """
-    return RedisChatMessageHistory(
+# Initialize the chain with memory
+chain = prompt | llm
+chain_with_history = RunnableWithMessageHistory(
+    chain,
+    lambda session_id: RedisChatMessageHistory(
         session_id=session_id,
         redis_client=redis_client,
-    )
+    ),
+    input_messages_key="question",
+    history_messages_key="history"
+)
+
+# Initialize Redis vector store
 
 
-def chat_with_memory(question: str, session_id: str) -> str:
-    """
-    Process a chat message with memory
-    Args:
-        question (str): User question
-        session_id (str): Session identifier
-    Returns:
-        str: Generated response
-    """
-    context = retrieve_docs(question)
-    response = chain_with_history.invoke(
-        {"question": question, "context": context},
-        config={"configurable": {"session_id": session_id}}
-    )
-    return response.content
-
-
-# Create FastAPI app
-app = FastAPI()
-
-# Define request model
-
-
-# class QuestionRequest(BaseModel):
-#     question: str
-#     session_id: str
-
-# Define response model
-
-
-class AnswerResponse(BaseModel):
-    answer: str
-
-
-@app.post("/api/chat", response_model=AnswerResponse)
-# async def chat_endpoint(request: QuestionRequest):
-async def chat_endpoint(question: str = Query(...)):
-    session_id = "rag_session"
-    try:
-        answer = chat_with_memory(question, session_id)
-        return AnswerResponse(answer=answer)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-if __name__ == "__main__":
-    # Initialize OpenAI embeddings
-    embed_model = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
-
-    # Initialize LLM
-    llm = ChatOpenAI(
-        model="gpt-3.5-turbo",
-        temperature=0,
-        max_tokens=None,
-        timeout=None,
-        max_retries=2,
-        api_key=OPENAI_API_KEY,
-    )
-
-    # Get and prepare data
-    data = get_data()
-    df = prepare_data(data)
-    corpus = create_corpus(df)
-    index_name = "product_index"
-
+def init_redis_store():
     try:
         # Attempt to connect to existing index
-        redis_instance = Redis.from_existing_index(
+        return Redis.from_existing_index(
             embedding=embed_model,
-            index_name=index_name,
+            index_name="product_index",
             redis_url=redis_url,
             schema={
                 "summary": "TEXT",
@@ -251,29 +111,93 @@ if __name__ == "__main__":
                 }
             }
         )
-        print("Connected to existing Redis index.")
     except Exception as e:
         print(f"Existing index not found: {e}")
         print("Creating new Redis index...")
-        # Create summaries and setup Redis
+        # Get and prepare data
+        data = get_data()
+        df = prepare_data(data)
+        corpus = create_corpus(df)
         summaries = [create_prod_summary(text) for text in corpus]
-        # Create new index if not found
-        redis_instance = Redis.from_texts(
+
+        # Create new index
+        return Redis.from_texts(
             texts=summaries,
             embedding=embed_model,
-            index_name=index_name,
+            index_name="product_index",
             redis_url=redis_url,
             metadata=[{"id": i} for i in range(len(summaries))],
         )
-        print("New Redis index created successfully.")
 
-    # Create the chain with memory
-    chain = prompt | llm
-    chain_with_history = RunnableWithMessageHistory(
-        chain,
-        get_redis_history,
-        input_messages_key="question",
-        history_messages_key="history"
+
+# Initialize redis_instance at startup
+# redis_instance = None
+
+@app.on_event("startup")
+async def startup_event():
+    # global redis_instance
+    global redis_instance
+    redis_instance = init_redis_store()
+
+
+def get_data() -> List[Dict]:
+    """Fetch product data from the API"""
+    url = "https://eeg-backend-hfehdmd4hxfagsgu.canadacentral-01.azurewebsites.net/api/users/product"
+    response = requests.get(url)
+    return response.json()
+
+
+def prepare_data(data: List[Dict]) -> pd.DataFrame:
+    """Clean and prepare the product data"""
+    df = pd.DataFrame(data)
+    df.fillna("Unknown", inplace=True)
+    df["chemicalProperties"] = df["chemicalProperties"].apply(
+        lambda x: "Unknown" if len(x) == 0 else x
     )
+    return df
 
+
+def create_corpus(df: pd.DataFrame) -> List[str]:
+    """Create a text corpus from the DataFrame"""
+    corpus = []
+    for i in range(df.shape[0]):
+        text = " ".join(f"{col}: {str(df[col][i])}" for col in df.columns)
+        corpus.append(text)
+    return corpus
+
+
+def create_prod_summary(text: str) -> str:
+    """Create a product summary using ChatGPT"""
+    message = f"Here is a product data {text}. Your job is to create a listing of the entire product. Mention all the features and details present in the data."
+    return llm.invoke(message).content
+
+
+def retrieve_docs(question: str) -> str:
+    """Retrieve relevant documents for a given question"""
+    modified_question = llm.invoke(
+        question_template.format(question=question)).content
+    redis_result = redis_instance.similarity_search(
+        query=modified_question, k=5)
+    return "\n".join(res.page_content for res in redis_result)
+
+
+class AnswerResponse(BaseModel):
+    answer: str
+
+
+@app.post("/api/chat", response_model=AnswerResponse)
+async def chat_endpoint(question: str = Query(...)):
+    """Handle chat endpoint"""
+    session_id = "rag_session"
+    try:
+        context = retrieve_docs(question)
+        answer = chain_with_history.invoke(
+            {"question": question, "context": context},
+            config={"configurable": {"session_id": session_id}}
+        )
+        return AnswerResponse(answer=answer.content)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
