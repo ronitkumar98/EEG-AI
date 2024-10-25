@@ -65,9 +65,11 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AA4BB4FF3A9F42A3AE7DA42EE7400CDE }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4DE82AC2809C4B65A436C5E5296C5EF4 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C31074C2535C40F3949FBE31FD0C3E3C }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          federated-credential: repo:ronitkumar98/EEG-AI:environment:Production
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
