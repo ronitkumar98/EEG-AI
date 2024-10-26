@@ -61,18 +61,21 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0999EC0CC827476492C19DD3EF31FB65 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B72ED02634CC401CA074A4095CF083F5 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_45CA37CE583640E6A375CFB2F6505A8C }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: 9068d8db-33b5-4eeb-b5bd-db971d123048
+          federated-credential: repo:ronitkumar98/EEG-AI:environment:Production
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'EEG-AI-2'
-          slot-name: 'Production'
-          
+          slot-name: 'f3hjf6h8fpathjev'
+        env:  # Add environment variables using GitHub Secrets
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REDIS_HOST: ${{ secrets.REDIS_HOST }}
+          REDIS_PASS: ${{ secrets.REDIS_PASS }}
