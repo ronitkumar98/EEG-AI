@@ -68,7 +68,7 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           client-secret-id: ${{ secrets.AZURE_CLIENT_SECRET_ID }}
           subscription-id: ${{secrets.AZURE_SUBSCRIPTION_ID}}
-          federated-credential: repo:ronitkumar98/EEG-AI:environment:Production
+          federated-credential: repo:ronitkumar98/EEG-AI:environment:production
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
