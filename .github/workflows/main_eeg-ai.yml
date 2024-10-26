@@ -74,7 +74,7 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'EEG-AI'
-          #slot-name: 'production'
+          slot-name: 'f3hjf6h8fpathjev'
         env:  # Add environment variables using GitHub Secrets
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           REDIS_HOST: ${{ secrets.REDIS_HOST }}
