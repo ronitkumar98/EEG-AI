@@ -1,12 +1,4 @@
-"""
-Product Information Retrieval System with Memory
-This script implements a RAG (Retrieval Augmented Generation) system that:
-1. Fetches product data from an API
-2. Creates vector embeddings stored in Redis
-3. Implements a conversation system with memory
-4. Retrieves and answers product-related queries
-"""
-
+from flask import Flask, request, jsonify
 from langchain_redis import RedisChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -21,18 +13,12 @@ import dotenv
 from typing import List, Dict
 import json
 import os
-import warnings
-import uvicorn
-from fastapi import FastAPI, HTTPException, Query
-from pydantic import BaseModel
-
-warnings.filterwarnings("ignore")
 
 # Load environment variables
 dotenv.load_dotenv()
 
-# Initialize FastAPI app
-app = FastAPI()
+# Initialize Flask app
+app = Flask(__name__)
 
 # Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -91,12 +77,8 @@ chain_with_history = RunnableWithMessageHistory(
     history_messages_key="history"
 )
 
-# Initialize Redis vector store
-
-
 def init_redis_store():
     try:
-        # Attempt to connect to existing index
         return Redis.from_existing_index(
             embedding=embed_model,
             index_name="product_index",
@@ -111,16 +93,12 @@ def init_redis_store():
                 }
             }
         )
-    except Exception as e:
-        print(f"Existing index not found: {e}")
-        print("Creating new Redis index...")
-        # Get and prepare data
+    except Exception:
         data = get_data()
         df = prepare_data(data)
         corpus = create_corpus(df)
         summaries = [create_prod_summary(text) for text in corpus]
-
-        # Create new index
+        
         return Redis.from_texts(
             texts=summaries,
             embedding=embed_model,
@@ -129,26 +107,12 @@ def init_redis_store():
             metadata=[{"id": i} for i in range(len(summaries))],
         )
 
-
-# Initialize redis_instance at startup
-# redis_instance = None
-
-@app.on_event("startup")
-async def startup_event():
-    # global redis_instance
-    global redis_instance
-    redis_instance = init_redis_store()
-
-
 def get_data() -> List[Dict]:
-    """Fetch product data from the API"""
     url = "https://eeg-backend-hfehdmd4hxfagsgu.canadacentral-01.azurewebsites.net/api/users/product"
     response = requests.get(url)
     return response.json()
 
-
 def prepare_data(data: List[Dict]) -> pd.DataFrame:
-    """Clean and prepare the product data"""
     df = pd.DataFrame(data)
     df.fillna("Unknown", inplace=True)
     df["chemicalProperties"] = df["chemicalProperties"].apply(
@@ -156,49 +120,50 @@ def prepare_data(data: List[Dict]) -> pd.DataFrame:
     )
     return df
 
-
 def create_corpus(df: pd.DataFrame) -> List[str]:
-    """Create a text corpus from the DataFrame"""
     corpus = []
     for i in range(df.shape[0]):
         text = " ".join(f"{col}: {str(df[col][i])}" for col in df.columns)
         corpus.append(text)
     return corpus
 
-
 def create_prod_summary(text: str) -> str:
-    """Create a product summary using ChatGPT"""
     message = f"Here is a product data {text}. Your job is to create a listing of the entire product. Mention all the features and details present in the data."
     return llm.invoke(message).content
 
-
 def retrieve_docs(question: str) -> str:
-    """Retrieve relevant documents for a given question"""
     modified_question = llm.invoke(
         question_template.format(question=question)).content
     redis_result = redis_instance.similarity_search(
         query=modified_question, k=5)
     return "\n".join(res.page_content for res in redis_result)
 
+# Initialize redis_instance at startup
+redis_instance = None
 
-class AnswerResponse(BaseModel):
-    answer: str
+@app.before_first_request
+def startup():
+    global redis_instance
+    redis_instance = init_redis_store()
 
+@app.route('/')
+def health_check():
+    return jsonify({"status": "healthy", "message": "Service is running"})
 
-@app.post("/api/chat", response_model=AnswerResponse)
-async def chat_endpoint(question: str = Query(...)):
-    """Handle chat endpoint"""
+@app.route('/api/chat', methods=['POST'])
+def chat_endpoint():
     session_id = "rag_session"
-    try:
-        context = retrieve_docs(question)
-        answer = chain_with_history.invoke(
-            {"question": question, "context": context},
-            config={"configurable": {"session_id": session_id}}
-        )
-        return AnswerResponse(answer=answer.content)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    question = request.args.get('question')
+    if not question:
+        return jsonify({"error": "Question parameter is required"}), 400
+
+    context = retrieve_docs(question)
+    answer = chain_with_history.invoke(
+        {"question": question, "context": context},
+        config={"configurable": {"session_id": session_id}}
+    )
+    return jsonify({"answer": answer.content})
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-
+    port = int(os.getenv("PORT", "8000"))
+    app.run(host="0.0.0.0", port=port)
