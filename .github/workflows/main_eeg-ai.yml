@@ -68,11 +68,15 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F2EE9092F3B94829BD6F4E20813CDFCE }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6503B1E5FD574FA3A1E1AE5BCCB105DE }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2F248D2E379C4D4382B98343291DA362 }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'EEG-AI'
-          slot-name: 'Production'
-          
+          slot-name: ''
+        env:  # Add environment variables using GitHub Secrets
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REDIS_HOST: ${{ secrets.REDIS_HOST }}
+          REDIS_PASS: ${{ secrets.REDIS_PASS }}
